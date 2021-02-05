@@ -1,0 +1,26 @@
+<html>
+
+<script>
+    const namaPertama = () => {
+        return new Promise((resolve , reject) => {
+            setTimeout(() => {
+                resolve('yudi')
+            },2000);
+        });
+    }
+
+    const namaKedua = () => {
+        return new Promise((resolve , gagal) => {
+            setTimeout(() => {
+                resolve(' gunawan')
+            },1000)
+        })
+    }
+   const hasil = async() => {
+        const pertama = await namaPertama();
+        const kedua = await namaKedua();
+        console.log(pertama +''+kedua);
+   }
+   hasil()
+</script>
+</html>
