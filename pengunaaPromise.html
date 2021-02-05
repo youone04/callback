@@ -1,0 +1,30 @@
+<html>
+
+<script>
+    const namaPertama = () => {
+        return new Promise((resolve , reject) => {
+            setTimeout(() => {
+                resolve('yudi')
+            },2000);
+        });
+    }
+
+    const namaKedua = (nmKedua) => {
+        return new Promise((resolve , gagal) => {
+            setTimeout(() => {
+                resolve(nmKedua +' gunawan')
+            },1000)
+        })
+    }
+    
+    namaPertama()
+    .then(res => {
+        // parameter res dikirimkan ke fungsi namaKedua dan di tangkap oleh parameter nmKedua
+        return namaKedua(res)
+    })
+    .then(hasil => {
+        console.log(hasil)
+    })
+
+</script>
+</html>
