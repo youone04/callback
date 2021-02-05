@@ -1,0 +1,30 @@
+<html>
+
+<script>
+    const namaPertama = (solve) => {
+        setTimeout(() => {
+            solve('yudi')
+        },2000)
+       
+    }
+    const Api = (solve) => {
+        setTimeout(() => {
+            solve('api')
+        },1000)
+
+    }
+
+    // contoh handle asyncronus dg callback
+   namaPertama(hasil => {
+       Api(res =>{
+        const namaPertama = hasil;
+       const namaKedua = 'gunawan'
+       const gabungan = namaPertama + namaKedua;
+       console.log(res + gabungan)
+       })
+   
+    })
+
+
+</script>
+</html>
